@@ -6,19 +6,21 @@ from .query_base import QueryBase
 
 # Create a subclass of QueryBase
 # called  `Team`
+
+
 class Team(QueryBase):
 
     # Set the class attribute `name`
     # to the string "team"
     name = "team"
 
-
     # Define a `names` method
     # that receives no arguments
     # This method should return
     # a list of tuples from an sql execution
+
     def names(self):
-        
+
         # Query 5
         # Write an SQL query that selects
         # the team_name and team_id columns
@@ -30,12 +32,12 @@ class Team(QueryBase):
             ORDER BY team_id
         """
         return self.query(sql_query)
-    
 
     # Define a `username` method
     # that receives an ID argument
     # This method should return
     # a list of tuples from an sql execution
+
     def username(self, id):
 
         # Query 6
@@ -50,7 +52,7 @@ class Team(QueryBase):
             WHERE team_id = {id}
         """
         return self.query(sql_query)
-    
+
     # Below is method with an SQL query
     # This SQL query generates the data needed for
     # the machine learning model.
@@ -58,7 +60,6 @@ class Team(QueryBase):
     # so when it is called, a pandas dataframe
     # is returns containing the execution of
     # the sql query
-    #### YOUR CODE HERE
     def model_data(self, id):
 
         sql_query = f"""
