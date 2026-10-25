@@ -3,7 +3,34 @@
 
 A dashboard that shows employee and team performance and predicts recruitment risk.
 
-This repository contains starter code for the **Software Engineering for Data Scientists** final project. Please reference your course materials for documentation on this repository's structure and important files. Happy coding!
+Final project of the Udacity course Software Engineering for Data Scientists.
+
+## Setup
+
+Requires Python 3.12. Run all commands from the project root.
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+## Run the dashboard
+
+```bash
+python report/dashboard.py
+```
+
+Open http://localhost:5001 in the browser.
+
+## Run lint and tests
+
+```bash
+flake8 --extend-exclude src,venv
+pytest
+```
+
+A GitHub Action runs both on every push to `main`.
 
 ### Repository Structure
 ```
