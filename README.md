@@ -7,11 +7,12 @@ Final project of the Udacity course Software Engineering for Data Scientists.
 
 ## Setup
 
-Requires Python 3.12. Run all commands from the project root.
+Tested with Python 3.11 and 3.12. Run all commands from the project root.
 
 ```bash
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate          # Windows
+source venv/bin/activate       # macOS / Linux
 pip install -r requirements.txt
 ```
 
